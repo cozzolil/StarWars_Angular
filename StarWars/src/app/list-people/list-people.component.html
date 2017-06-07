@@ -1,0 +1,22 @@
+<h1> Star Wars Characters </h1>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div [class.oscurato]="isLoading" class="container">
+  <ul class="w3-ul w3-hoverable">
+    <li (click)="onSelect(people.url)" *ngFor="let people of person">
+      <a routerLinkActive="active">{{people.name}}</a>
+    </li>
+  </ul>
+
+</div>
+
+<div class="buttondiv">
+<button (click)="logout()"> Logout </button>
+  <div  class="control">
+    <button [class.hidden] = "isLoading" (click)="prevPage()"><<</button>
+    <button [class.hidden] = "isLoading" (click)="nextPage()">>></button> 
+  </div>
+  page {{nPage}}
+</div>
+
+

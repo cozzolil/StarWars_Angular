@@ -1,0 +1,22 @@
+
+li.detail-entry{
+    margin:2%
+}
+
+li.detail-entry.stronged{
+   font-weight: bold;
+}
+
+
+div.more-details{
+    display:none;
+}
+
+div.more-details.visible{
+
+    display: block;
+}
+
+button{
+    float:right;
+}

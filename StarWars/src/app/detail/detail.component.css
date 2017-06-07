@@ -1,0 +1,13 @@
+button{
+    margin-top:10px;
+}
+
+li.detail-entry:hover{
+    background-color:lightgrey;
+}
+
+div{
+     margin-left: 5%;
+        margin-right:5%;
+        width: 90%;
+}

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<form [class.oscurato]="isLoading" #registerForm = "ngForm" >
+  <h1> Register </h1>
+  <div>
+    <input type="text" name="username" [(ngModel)]="newUser.username" placeholder="Username" required>
+  </div>
+
+  <div>
+    <input type="text" name="firstname" [(ngModel)]="newUser.firstName" placeholder="Nome" required>
+  </div>
+
+  <div>
+    <input type="text" name="lastname" [(ngModel)]="newUser.lastName" placeholder="Cognome" required>
+  </div>
+
+  <div>
+    <input type="password" name="password" [(ngModel)]="newUser.password" placeholder="Password" required>
+  </div>
+
+  <div>
+    <button [disabled]="isLoading || !registerForm.valid" (click)="registrati()"> Registrati! </button>
+    <a routerLink='/login' routerLinkActive="active">Login</a>
+  </div>
+</form>
+
+<div class="alert" *ngIf="ErrorinRegistration" [ngStyle]="{'color': 'red'}">Errore durante la registrazione</div>

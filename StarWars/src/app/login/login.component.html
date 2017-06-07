@@ -1,0 +1,21 @@
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<form [class.oscurato]="isLoading" #loginForm="ngForm">
+    <h1> Login </h1>
+    <div >
+        <input type="text" name="username" [(ngModel)]="username" placeholder="Username" required>
+    </div>
+
+    <div>
+        <input type="password" name="password" [(ngModel)]="password" placeholder="Password" required>
+    </div>
+
+    <div>
+        <button  [disabled]="isLoading || !loginForm.valid" (click)="login()"> Login! </button>
+        <a routerLink="/register" routerLinkActive="active">Registrati</a>
+    </div>
+</form>
+
+<div class="alert" *ngIf="ErrorInLogin" [ngStyle]="{'color': 'red'}">Credenziali errate</div>

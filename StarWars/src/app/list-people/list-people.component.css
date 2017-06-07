@@ -1,0 +1,35 @@
+div.control{
+    margin-top:10px;
+}
+
+a, h1, button{
+    margin:1%
+}
+
+li, button {
+    cursor:pointer;
+}
+
+div.container{
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.oscurato{
+        opacity: 0.3;
+        pointer-events: none;
+        }
+        
+.buttondiv {
+    margin-left:calc(50% - 100px);
+    margin-right:calc(50% - 100px);
+
+}
+
+
+
+

@@ -1,0 +1,10 @@
+<ul> Film:
+  <li class="detail-entry title"  [class.stronged]="i == selected" *ngFor="let film of filmDetail; let i=index">Title: {{film.title}}
+    <button *ngIf = "filmDetail.length > 1" (click)="Selezionato(i)"> More...</button>
+    <div class="more-details" [class.visible]="i == selected">
+      <li>Director: {{film.director}}</li>
+      <li>Producer: {{film.producer}}</li>
+      <li>Episode_id: {{film.episode_id}} </li>
+    </div>
+  </li>
+</ul>
